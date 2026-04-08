@@ -1227,7 +1227,7 @@ class FBDManager:
 
         # Log startup message with diagnostic info
         self.log("=" * 60)
-        self.log("FBD Node Manager GUI v3.0.0 Started")
+        self.log("FBD Node Manager GUI v3.1.0 Started")
         self.log(f"📝 Log file: {self.log_file}")
         self.log(f"📁 Log directory: {self.log_file.parent}")
         self.log("=" * 60)
@@ -1464,7 +1464,8 @@ class FBDManager:
         self.miner_address_entry.grid(row=5, column=1, sticky="ew", pady=2)
 
         # Miner threads
-        ttk.Label(config_frame, text="Miner Threads:").grid(
+        max_threads = os.cpu_count() or 1
+        ttk.Label(config_frame, text=f"Miner Threads (max: {max_threads}):").grid(
             row=6, column=0, sticky="w", pady=2
         )
         self.miner_threads_var = tk.StringVar(value="12")
@@ -6198,7 +6199,7 @@ class FBDManager:
     def show_help(self):
         """Display help dialog with quick reference"""
         help_text = """
-FBD Node Manager v3.0.0 - Quick Help
+FBD Node Manager v3.1.0 - Quick Help
 
 🐧 PLATFORM:
 • Linux-native Python app (runs on native Linux, WSL, or Windows via WSL)
