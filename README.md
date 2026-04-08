@@ -4,15 +4,30 @@
 
 A comprehensive graphical interface for managing FBD (Fistbump) nodes, mining, wallets, and name auctions.
 
+## 🐧 Platform Compatibility
+
+**This is a Linux-native Python application** that runs on:
+- ✅ **Native Linux** - Run directly with `python3 fbd_wslgui.py`
+- ✅ **WSL (Windows Subsystem for Linux)** - Run directly or use wrapper scripts
+- ✅ **Windows (via WSL)** - Use included `.bat` launcher scripts for convenience
+
+> 💡 **Note:** The "wslgui" naming reflects its original WSL development environment and community introduction, but the core app is standard cross-platform Python/Tkinter that runs natively on any Linux system.
+
 ## ⚡ Quick Start
 
-**Windows Users:**
+**Native Linux:**
+```bash
+python3 fbd_wslgui.py
+```
+Direct execution - no additional setup needed!
+
+**Windows Users (via WSL):**
 ```
 Double-click: fbd-wslgui_launch.bat
 ```
-That's it! The launcher handles X11 server setup automatically.
+The launcher handles WSL invocation and X11 server setup automatically.
 
-**WSL Users (Direct):**
+**WSL Direct:**
 ```bash
 python3 fbd_wslgui.py
 ```

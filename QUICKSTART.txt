@@ -4,6 +4,16 @@
 ║                        April 2026                            ║
 ╚══════════════════════════════════════════════════════════════╝
 
+🐧 PLATFORM NOTES:
+───────────────────────────────────────────────────────────────
+This is a Linux-native Python application:
+  • Runs directly on native Linux systems
+  • Runs directly in WSL environments
+  • Can be used on Windows via WSL wrapper scripts (.bat)
+
+The "wslgui" name reflects original WSL development, but this
+is standard cross-platform Python/Tkinter code.
+
 📋 CURRENT FILES:
 
 Core Application:
@@ -33,7 +43,15 @@ Documentation:
 🚀 QUICK START:
 
 ═══════════════════════════════════════════════════════════════
-EASIEST METHOD (RECOMMENDED)
+NATIVE LINUX (SIMPLEST)
+═══════════════════════════════════════════════════════════════
+
+  python3 fbd_wslgui.py
+
+  That's it! No WSL, no X11 forwarding needed.
+
+═══════════════════════════════════════════════════════════════
+WINDOWS (VIA WSL) - RECOMMENDED METHOD
 ═══════════════════════════════════════════════════════════════
 
 Just Double-Click:
@@ -44,7 +62,7 @@ That's it! The launcher will:
   ✓ Check for X11 server (VcXsrv)
   ✓ Offer to install if missing
   ✓ Auto-start with correct settings
-  ✓ Launch the GUI
+  ✓ Invoke WSL to launch the GUI
 
 ───────────────────────────────────────────────────────────────
 

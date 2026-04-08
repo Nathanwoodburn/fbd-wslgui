@@ -1334,12 +1334,13 @@ class FBDManager:
         self.miner_address_entry.grid(row=5, column=1, sticky="ew", pady=2)
 
         # Miner threads
-        ttk.Label(config_frame, text="Miner Threads:").grid(
+        max_threads = os.cpu_count() or 1
+        ttk.Label(config_frame, text=f"Miner Threads (max: {max_threads}):").grid(
             row=6, column=0, sticky="w", pady=2
         )
         self.miner_threads_var = tk.StringVar(value="12")
         self.miner_threads_entry = ttk.Entry(
-            config_frame, textvariable=self.miner_threads_var, width=32
+            config_frame, textvariable=self.miner_threads_var, width=18
         )
         self.miner_threads_entry.grid(row=6, column=1, sticky="ew", pady=2)
 

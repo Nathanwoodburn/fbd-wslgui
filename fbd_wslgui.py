@@ -6062,6 +6062,11 @@ class FBDManager:
         help_text = """
 FBD Node Manager v3.0.0 - Quick Help
 
+🐧 PLATFORM:
+• Linux-native Python app (runs on native Linux, WSL, or Windows via WSL)
+• "wslgui" name reflects original WSL development environment
+• Core app is standard cross-platform Python/Tkinter
+
 ⚠️  REQUIRED BINARIES:
 • fbd & fbdctl NOT included in repo (file size)
 • Download: https://fbd.dev/download/fbd-latest-linux-x86_64.zip
