@@ -1,0 +1,377 @@
+╔══════════════════════════════════════════════════════════════╗
+║              FBD GUI v3.0.0 QUICK START GUIDE                ║
+║     Created by 'voding' [vibe-coding] - copilot+timaxal     ║
+║                        April 2026                            ║
+╚══════════════════════════════════════════════════════════════╝
+
+📋 CURRENT FILES:
+
+Core Application:
+  • fbd_wslgui.py              - Main GUI (v3.0.0)
+  • fbd_wslgui.test.py         - Test version
+  • fbd_wslgui.3-0-0.py        - Archived stable
+
+Launchers:
+  • fbd-wslgui_launch.bat      - Production launcher
+  • fbdwslgui-test_launch.bat  - Test launcher
+
+Binaries:
+  ⚠️  fbd, fbdctl are NOT INCLUDED - Download separately!
+      → Download: https://fbd.dev/download/fbd-latest-linux-x86_64.zip
+      → Extract: unzip fbd-latest-linux-x86_64.zip
+      → Place in same directory as fbd_wslgui.py
+      → Set execute permissions: chmod +x fbd fbdctl
+      → Keep updated by re-downloading latest zip
+
+Documentation:
+  • README.md               - Full documentation
+  • QUICKSTART.txt          - This file
+  • ai-hist_fbd-wslgui/         - Archived docs & versions
+
+───────────────────────────────────────────────────────────────
+
+🚀 QUICK START:
+
+═══════════════════════════════════════════════════════════════
+EASIEST METHOD (RECOMMENDED)
+═══════════════════════════════════════════════════════════════
+
+Just Double-Click:
+──────────────────
+fbd-wslgui_launch.bat
+
+That's it! The launcher will:
+  ✓ Check for X11 server (VcXsrv)
+  ✓ Offer to install if missing
+  ✓ Auto-start with correct settings
+  ✓ Launch the GUI
+
+───────────────────────────────────────────────────────────────
+
+⚙️ FIRST TIME CONFIGURATION:
+
+1. SETTINGS TAB
+   ────────────
+   FBD Path: ./fbd-latest-linux-x86_64/fbd
+   RPC Host: localhost
+   RPC Port: (auto-set by network)
+   
+   Click "Save Settings"
+
+2. NODE & MINING TAB
+   ─────────────────
+   Network: main (or testnet for testing)
+   Miner Address: your FBC wallet address
+   Miner Threads: 12 (or 0 for auto)
+   Enable Mining: ✓ (or uncheck for node-only)
+   
+   Click "Start Node"
+
+3. MONITOR
+   ───────
+   Watch log output
+   Check status: Block Height, Peers
+   Wait for sync
+
+───────────────────────────────────────────────────────────────
+
+💰 WALLET QUICK REFERENCE:
+
+Create Wallet:
+  Wallet Tab → Create Wallet → Save mnemonic!
+
+Check Balance:
+  Wallet Tab → Get Wallet Info
+
+Send Payment:
+  Wallet Tab → Enter address & amount → Send
+
+View History:
+  Wallet Tab → Load Transactions
+
+───────────────────────────────────────────────────────────────
+
+🏆 AUCTION QUICK REFERENCE:
+
+Check Name:
+  Auctions Tab → Enter name → Get Name Info
+
+Open Auction:
+  Enter name → Open Auction
+
+Place Bid:
+  Enter bid amount → Enter lockup (≥ bid) → Place Bid
+
+Reveal Bid:
+  (Wait for REVEAL period) → Reveal Bid
+
+Register Name:
+  (After winning) → Register
+
+View Names:
+  Load My Names
+
+───────────────────────────────────────────────────────────────
+
+📊 NETWORK PORTS:
+
+Network  │ P2P   │ RPC   │ Prefix
+─────────┼───────┼───────┼────────
+main     │ 32867 │ 32868 │ fb
+testnet  │ 42867 │ 42868 │ ft
+regtest  │ 52867 │ 52868 │ fr
+simnet   │ 62867 │ 62868 │ fs
+
+───────────────────────────────────────────────────────────────
+
+💾 FILE LOCATIONS:
+
+Config:  ~/.fbdgui/fbdgui_config.json
+Profiles: ~/.fbdgui/profiles/
+Logs:    ~/.fbdgui/fbdgui.log
+Archive: ./ai-hist_fbd-wslgui/
+
+───────────────────────────────────────────────────────────────
+
+🆘 COMMON ISSUES:
+
+GUI Won't Start:
+  • Check X11 server running (system tray)
+  • Use fbd-wslgui_launch.bat for auto-setup
+  • Test: python3 -c "import tkinter"
+
+RPC Connection Failed:
+  • Wait 5-10 seconds after starting node
+  • Check node is running in log
+  • Verify correct RPC port for network
+
+Permission Errors (WSL):
+  chmod +x fbd fbdctl fbd_wslgui.py
+
+Node Won't Start:
+  • Verify FBD path in Settings
+  • Check executable exists
+  • Review log output
+
+───────────────────────────────────────────────────────────────
+
+🎯 EXAMPLE WORKFLOWS:
+
+SOLO MINING:
+  1. Double-click fbd-wslgui_launch.bat
+  2. Settings → Set miner address
+  3. Node & Mining → Enable Mining ✓
+  4. Set threads (12) → Start Node
+  5. Monitor log for "Mined block..."
+
+NAME REGISTRATION:
+  1. Launch GUI
+  2. Auctions → Get Name Info
+  3. Open Auction → Wait for BIDDING
+  4. Place Bid → Wait for REVEAL
+  5. Reveal Bid → Wait for close
+  6. Register (if won)
+
+NODE SYNC ONLY:
+  1. Launch GUI
+  2. Node & Mining → Disable Mining
+  3. Enable needed indexes
+  4. Start Node → Monitor sync
+
+───────────────────────────────────────────────────────────────
+
+🔗 RESOURCES:
+
+Docs:     https://fbd.dev
+Explorer: https://explorer.fistbump.org/
+Paper:    https://fistbump.org/fistbump.txt
+Source:   https://github.com/fistbump-org/fbd
+
+───────────────────────────────────────────────────────────────
+
+📖 MORE HELP:
+
+• README.md - Complete documentation
+• In-app Help - Click "? HELP" button
+• ai-hist_fbdgui/ - Additional archived docs
+
+───────────────────────────────────────────────────────────────
+
+Ready to go? → Double-click fbd-wslgui_launch.bat 🚀
+  
+Stop_VcXsrv.bat
+  ✓ Stops the X11 server
+  ✓ Useful when you're done with GUI apps
+
+vcxsrv_config.xlaunch
+  ✓ Pre-configured VcXsrv settings file
+  ✓ Double-click to launch VcXsrv with optimal settings
+
+───────────────────────────────────────────────────────────────
+
+⚙️ GUI FEATURES:
+
+NODE & MINING TAB
+─────────────────
+✓ Start/stop FBD node
+✓ Enable/disable mining
+✓ Configure miner address & threads
+✓ Choose network (main/testnet/regtest/simnet)
+✓ Index options (tx, address, auctions)
+✓ Real-time status (blocks, peers)
+✓ Live log output
+
+WALLET TAB  
+──────────
+✓ List/create wallets
+✓ Check balance & addresses
+✓ Send payments
+✓ View transaction history
+
+AUCTIONS TAB
+────────────
+✓ Get name information
+✓ Open auctions
+✓ Place bids
+✓ Reveal bids  
+✓ Register names
+✓ View owned names
+
+SETTINGS TAB
+────────────
+✓ Configure FBD executable path
+✓ Set RPC host/port
+✓ Auto-restart options
+✓ Save/load all settings
+✓ Export/import configuration
+
+───────────────────────────────────────────────────────────────
+
+💡 RUNNING NODE WITHOUT MINING:
+
+In the "Node & Mining" tab:
+1. UNCHECK "Enable Mining"
+2. Click "Start Node"
+
+This runs a full node that syncs and validates but doesn't mine.
+
+───────────────────────────────────────────────────────────────
+
+📁 SETTINGS STORAGE:
+
+Settings are saved to:
+~/.fbdgui/fbdgui_config.json
+
+You can export/import this file to backup or transfer settings.
+
+───────────────────────────────────────────────────────────────
+
+🔧 TROUBLESHOOTING:
+
+GUI doesn't appear?
+─────────────────
+1. Make sure VcXsrv is running
+2. Check "Disable access control" is enabled
+3. Test: echo $DISPLAY (should show IP:0)
+4. Test: python3 -c "import tkinter; tkinter.Tk().mainloop()"
+
+RPC connection failed?
+─────────────────────
+1. Wait a few seconds after starting node
+2. Check node is running (see log output)
+3. Verify RPC port matches network:
+   main: 32868, testnet: 42868
+
+Permission denied?
+─────────────────
+chmod +x fbd fbdctl fbd-wslgui_run.sh fbd_wslgui.py
+
+Can't find fbdctl?
+─────────────────
+Make sure you're in the right directory:
+cd fbd-latest-linux-x86_64/
+
+───────────────────────────────────────────────────────────────
+
+📚 NETWORK REFERENCE:
+
+Network  | P2P   | RPC   | DNS   | Prefix
+─────────┼───────┼───────┼───────┼────────
+main     | 32867 | 32868 | 32869 | fb
+testnet  | 42867 | 42868 | 42869 | ft  
+regtest  | 52867 | 52868 | 52869 | fr
+simnet   | 62867 | 62868 | 62869 | fs
+
+───────────────────────────────────────────────────────────────
+
+🔗 RESOURCES:
+
+• FBD Documentation: https://fbd.dev
+• Whitepaper: https://fistbump.org/fistbump.txt  
+• Block Explorer: https://explorer.fistbump.org/
+• Source Code: https://github.com/fistbump-org/fbd
+
+───────────────────────────────────────────────────────────────
+
+📝 EXAMPLE WORKFLOW:
+
+1. Start VcXsrv on Windows
+2. Open WSL terminal
+3. cd /mnt/e/STORE/app2MULT\app_hns\app_fbd\fbd_node
+4. ./fbd-wslgui_run.sh
+5. In GUI Settings tab: Set FBD path to ./fbd-latest-linux-x86_64/fbd
+6. In Node & Mining tab: Configure your miner address
+7. Click "Start Node"
+8. Monitor status and logs
+9. Use Wallet tab to manage funds
+10. Use Auctions tab to bid on names
+
+───────────────────────────────────────────────────────────────
+
+🤖 AUCTION AUTOMATION (NEW!)
+
+QUICK REFERENCE
+────────────────
+Automate entire auction flow: OPEN → BID → REVEAL → REGISTER
+
+SETUP:
+1. Go to Auctions tab
+2. Enter name, bid amount, lockup amount, wallet
+3. ☑ Check "Auto-continue through auction phases"
+4. Click "Send Bid"
+5. If INACTIVE, choose "Open and automate"
+
+REQUIREMENTS:
+• FBD node running
+• Wallet unlocked: fbdctl walletpassphrase "wallet" "password" 3600
+• Sufficient funds (bid + lockup + fees)
+• GUI running during auction phases
+
+JOB STATUSES:
+• opening...           - Opening auction
+• opened              - Waiting for BIDDING
+• bid_placed          - Waiting for REVEAL
+• revealed            - Waiting for result
+• registered          - ✓ Won!
+• lost                - Outbid
+• failed              - Check error
+• paused_wallet_locked - Unlock wallet!
+
+NOTIFICATIONS:
+• Green = Success (opened, bid, revealed, won)
+• Orange = Warning (wallet locked, competing bid)
+• Red = Error (failed transactions)
+
+EMAIL ALERTS (optional):
+Settings → Email Notifications → Configure SMTP
+
+DOCS:
+• Full Guide: AUCTION_AUTOMATION_GUIDE.md
+• Testing: AUCTION_AUTOMATION_TEST.md
+• Tech Spec: AUCTION_AUTOMATION_PLAN.md
+
+───────────────────────────────────────────────────────────────
+
+Need help? Check GUI_README.md for detailed documentation.
+
+═══════════════════════════════════════════════════════════════

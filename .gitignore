@@ -1,0 +1,37 @@
+# AI history and development documentation
+ai-hist_fbd-wslgui/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# FBD specific runtime files
+.fbd-tim4x/
+.vcxsrv_running
+
+# FBD binaries (use system installed versions instead)
+fbd
+fbdctl
+
+# Log files
+*.log
